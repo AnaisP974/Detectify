@@ -1,0 +1,84 @@
+$backGroundColorMain : #1a1a1a;
+$backgroundColorSecondary : #333;
+$backGroundColorTiers : #cccccc;
+$colorText : #ffffff;
+
+body {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backGroundColorMain;
+    color: $colorText;
+    font-family: Arial, sans-serif;
+    .container {
+        position: relative;
+        margin-top: 20px;
+        #webcam {
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+        }
+    }
+    .controls {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: $colorText;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #45a049;
+            }
+            &:disabled {
+                background-color: $backGroundColorTiers;
+                cursor: not-allowed;
+            }
+        }
+    }
+    .status {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $backgroundColorSecondary;
+        text-align: center;
+    }
+
+    .detection-stats {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: $backgroundColorSecondary;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 640px;
+        .stats-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            i{
+                font-size: 0.9em;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+

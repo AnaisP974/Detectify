@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+body .container {
+  position: relative;
+  margin-top: 20px;
+}
+body .container #webcam {
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+body .container #canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+body .controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+body .controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+body .controls button:hover {
+  background-color: #45a049;
+}
+body .controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+body .status {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  text-align: center;
+}
+body .detection-stats {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 640px;
+}
+body .detection-stats .stats-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+body .detection-stats .stats-item i {
+  font-size: 0.9em;
+}/*# sourceMappingURL=style.css.map */

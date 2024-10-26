@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détection d'objets en temps réel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <link rel="stylesheet" href="./assets/SASS/style.css">
+</head>
+<body>
+    <h1>Détection d'Objets en Temps Réel</h1>
+    
+    <div class="container">
+        <video id="webcam" width="640" height="480" autoplay muted></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="controls">
+        <button id="startBtn">Démarrer la caméra</button>
+        <button id="stopBtn" disabled>Arrêter</button>
+    </div>
+
+    <div class="status" id="status">En attente de démarrage...</div>
+
+    <div class="detection-stats">
+        <h3>Statistiques de détection</h3>
+        <div class="stats-item">
+            <span>FPS <i>(images traitées par seconde)</i>:</span>
+            <span id="fps">0</span>
+        </div>
+        <div class="stats-item">
+            <span>Objets détectés:</span>
+            <span id="objectCount">0</span>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
